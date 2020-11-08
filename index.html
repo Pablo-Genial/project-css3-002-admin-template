@@ -14,32 +14,43 @@
     <header class="header--dark">
 
         <h3 class="header__title">Admin Page</h3>
+        <span class="span-just">
+            <i class="fa fa-align-justify"></i>
+        </span>
         <div class="header__search">
-            <form action="">
-                <input id="search" type="text" class="search__input" type="text">
-                <button for="search" type="submit" class="search__btn">
+            <form style="margin:auto;max-width:300px">
+                <input type="text" class="search__input" placeholder="Search.." >
+                <button type="submit" class="search__btn">
                     <i class="fa fa-search"></i>
                 </button>
             </form>
+            <span class="span-user">
+                <i class="fa fa-user"></i>
+                <i class="fa fa-caret-down"></i>
+            </span>
         </div>
 
         <main>
 
             <aside>
-                <nav class="main__nav col-2 col-s-2" >
+                <nav class="main__nav col-2 col-s-1" >
                     <ul class="nav__ul">
-                        <li>Core</li>
+                        <li class="li-head">Core</li>
                             <li>
                                 <i class="fa fa-tachometer"></i>                            
                             Dashboard</li>
-                        <li>Interface</li>
+                        <li class="li-head">Interface</li>
                         <li>
                             <i class="fa fa-windows"></i>
-                            Layouts</li>
+                            Layouts
+                            <span class="span-arrow">></span>
+                        </li>
                         <li>
                             <i class="fa fa-bookmark"></i>
-                            Pages</li>
-                        <li>Addons</li>
+                            Pages
+                            <span class="span-arrow">></span>
+                        </li>
+                        <li class="li-head">Addons</li>
                         <li>
                             <i class="fa fa-area-chart"></i>
                             Charts</li>
@@ -51,10 +62,7 @@
             </aside>
 
 
-
-
-
-            <section class="content col-10 col-s-10">
+            <section class="content col-10 col-s-11">
                 <h1>Dashboard</h1>
                 <div class="main__breadcrumb">
                     Dashboard
@@ -62,22 +70,29 @@
                 <div class="main__cards">
                     <div class="main__card main__card--blue">
                         <div class="card__top">Primary Card</div>
-                        <div class="card__bottom">View details</div>
+                        <div class="card__bottom">View details
+                            <span class="span-arrow">></span>
+                        </div>
                     </div>
 
                     <div class="main__card main__card--yellow">
                         <div class="card__top">Warning Card</div>
-                        <div class="card__bottom">View details</div>
+                        <div class="card__bottom">View details
+                            <span class="span-arrow">></span>
+                        </div>
                     </div>
 
                     <div class="main__card main__card--green">
                         <div class="card__top">Success Card</div>
-                        <div class="card__bottom">View details</div>
+                        <div class="card__bottom">View details
+                            <span class="span-arrow">></span>                        </div>
                     </div>
 
                     <div class="main__card main__card--red">
                         <div class="card__top">Danger card</div>
-                        <div class="card__bottom">View details</div>
+                        <div class="card__bottom">View details
+                            <span class="span-arrow">></span>
+                        </div>
                     </div>
                 </div>
             </section>

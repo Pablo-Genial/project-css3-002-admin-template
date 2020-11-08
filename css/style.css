@@ -22,11 +22,7 @@ h1 {
     padding: 15px;
   }
 
-
-
-
-
-
+ 
 .main__card--blue {
     background-color: rgb(0,123,255)
 }
@@ -44,6 +40,7 @@ h1 {
     background-color: rgb(51, 57, 64);
     color: rgb(236, 236, 236);
     line-height: 3rem;
+    position: relative;
 }
 
 .header__title {
@@ -53,28 +50,41 @@ h1 {
 }
 
 .header__search {
-    display: inline;
+    display: inline-flex;
     float: right;
-    color: rgb(236, 236, 236);   
+    color: rgb(236, 236, 236);
+    position: absolute 2em;   
 }
 
 .search__input {
-    border-color: transparent;
-    padding: 0.375rem 0.75rem;
+    float: left;
     font-size: 1.2rem;    
-    border-radius: 4px 0 4px 0;    
+    padding: 0.375rem 0.75rem;
+    border: 1px solid rgb(100,100,100);
+    margin-top: .4rem;
+    border-radius: 4px 0 0 4px;    
+    transition: border-color .15s;
+    outline: none;
       
 }
 
 .search__input:focus {
+    border: 2px solid;
     border-color: rgb(128, 189, 255);
 }
 
 .search__btn {
+    float: right;
+    align-items: center;
+    height: 35px;
+    font-size: 1rem;
+    border: 1px solid rgb(100,100,100);
+    margin-top: .4rem;
+    color: rgb(255, 255, 255);
     background-color: rgb(0, 123, 255);
     text-align: center;
-    border: rgb(0, 123, 255);
-    padding: 6px;   
+    border: none;
+    border-radius: 0 4px 4px 0;
     }
 
 .main__nav {
@@ -89,9 +99,11 @@ h1 {
 }
 
 .nav__ul li {
-    padding: .6rem;
-    margin-bottom: .5rem;
-    color: rgb(200, 200, 200);    
+    padding-left: .6rem;
+    padding-bottom: .5rem;
+    color: rgb(200, 200, 200);
+    white-space: nowrap;
+    overflow: hidden;
     }
   
   .nav__ul li:hover {
@@ -100,12 +112,14 @@ h1 {
     color: rgb(254, 234, 250);
   }
 
-
+.li-head {
+    font-variant: small-caps;
+    padding-top: 1rem;    
+  }
 
 .main__breadcrumb {
     background-color: rgb(233, 236, 239);
     border-radius: .25rem;
-    margin: 1rem;
     color: rgb(51, 57, 64);
     padding: 1rem 1.5rem;
 }
@@ -128,17 +142,44 @@ h1 {
     margin: .5rem 0.5rem;
     font-size: 1rem;
     border-radius: .25rem .25rem .25rem .25rem;
-   }
+}
 
 .card__top {    
     padding: .5rem;
     line-height: 2.5rem;
-    }
+    transition: background-color .3s
+}
 
 .card__bottom {    
     padding: .5rem;
-    line-height: 1.5rem;    
+    line-height: 1.5rem;
+    border-top: .1rem solid rgba(0, 0, 0, 0.1);     
+    transition: background-color 0.3s
    }
+
+.span-arrow {
+   float: right;
+   padding: 0 1.5rem
+   white-space: nowrap;     
+   overflow: hidden;
+}
+
+.span-just {
+    padding-left: 5rem;
+}
+
+.span-user {
+    padding-left: 2rem;
+    padding-right: 1rem;
+}
+
+.card__top:hover {
+    background-color: rgb(100, 100, 100)
+}  
+.card__bottom:hover {
+    background-color: rgb(100, 100, 100)
+}
+
 
 
 @media screen and (max-width: 700px) {
@@ -153,7 +194,11 @@ h1 {
 
 
 
+
+
+
 @media only screen {
+   
     .col-s-1 {width: 8.33%;}
     .col-s-2 {width: 16.66%;}
     .col-s-3 {width: 25%;}
@@ -167,7 +212,9 @@ h1 {
     .col-s-11 {width: 91.66%;}
     .col-s-12 {width: 100%;}
   }
+
   @media only screen and (min-width: 700px) {
+    /* For desktop: */
     .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
     .col-3 {width: 25%;}
